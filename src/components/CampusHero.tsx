@@ -42,16 +42,19 @@ const CampusHero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg">
-              <MessageSquare className="mr-2 h-5 w-5" />
-              Start Chatting
+            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg">
+              <a href="#chat">
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Start Chatting
+              </a>
             </Button>
             <Button 
+              asChild
               variant="outline" 
               size="lg" 
               className="border-2 border-background/30 bg-background/10 backdrop-blur-sm text-primary-foreground hover:bg-background/20 px-8 py-6 text-lg"
             >
-              Learn More
+              <a href="#services">Learn More</a>
             </Button>
           </div>
 

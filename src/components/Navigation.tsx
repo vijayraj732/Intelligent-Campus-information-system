@@ -25,13 +25,15 @@ const Navigation = () => {
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
               Services
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              About
+            <a href="#chat" className="text-foreground hover:text-primary transition-colors">
+              Try AI Assistant
             </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
-            <Button>Get Started</Button>
+            <Button asChild>
+              <a href="#chat">Get Started</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -65,11 +67,11 @@ const Navigation = () => {
                 Services
               </a>
               <a
-                href="#about"
+                href="#chat"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                Try AI Assistant
               </a>
               <a
                 href="#contact"
@@ -79,7 +81,9 @@ const Navigation = () => {
                 Contact
               </a>
               <div className="px-3 py-2">
-                <Button className="w-full">Get Started</Button>
+                <Button asChild className="w-full">
+                  <a href="#chat" onClick={() => setIsMenuOpen(false)}>Get Started</a>
+                </Button>
               </div>
             </div>
           </div>
